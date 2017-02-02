@@ -116,7 +116,7 @@ static inline double DiagNewton(long p, long n, const double* samples,
       Sblock_more.resize(subpi);
 
       // Compute the current portion of S
-#ifdef SUPPORT_OPENMP
+#ifdef _OPENMP
 #pragma omp parallel for
 #endif
       for (long i = block_more_ptr[bi]; i < block_more_ptr[bi + 1]; i++) {
@@ -270,14 +270,14 @@ void QUIC(int p, int n, double* samples, double lambda, double tol, int msg, int
    double l1normX = 0.0;
    double trSX = 0.0;
    double logdetX = 0.0;
-   #ifdef SUPPORT_OPENMP
+   #ifdef _OPENMP
    double timeBegin = omp_get_wtime();
    #else
    double timeBegin = 0;
    #endif
 
 
-   #ifdef SUPPORT_OPENMP
+   #ifdef _OPENMP
    int maxnumthreads = omp_get_max_threads();
    if (numthreads > maxnumthreads)
       numthreads = maxnumthreads;
@@ -392,7 +392,7 @@ void QUIC(int p, int n, double* samples, double lambda, double tol, int msg, int
             int iserr = 0;
 
             // Compute W_i for a range of i
-#ifdef SUPPORT_OPENMP
+#ifdef _OPENMP
 #pragma omp parallel for schedule(dynamic)
 #endif
             for (long i = block_more_ptr[bi]; i < block_more_ptr[bi + 1]; i++) {
@@ -404,7 +404,7 @@ void QUIC(int p, int n, double* samples, double lambda, double tol, int msg, int
             }
 
             // Compute S_i for a range of i
-#ifdef SUPPORT_OPENMP
+#ifdef _OPENMP
 #pragma omp parallel for schedule(dynamic)
 #endif
             for (long i = block_more_ptr[bi]; i < block_more_ptr[bi + 1]; i++) {
@@ -936,7 +936,7 @@ void QUIC(int p, int n, double* samples, double lambda, double tol, int msg, int
       //if (msg >=0){
       if (msg >= 1){
          //printf("Iter %ld: obj %lf time %lf\n", NewtonIter, fX1, omp_get_wtime()-timeBegin);
-         #ifdef SUPPORT_OPENMP
+         #ifdef _OPENMP
          Rcout << "Iter " << NewtonIter << ": obj " << fX1 << " time " << omp_get_wtime() - timeBegin << endl;
          #else
                Rcout << "Iter " << NewtonIter << ": obj " << fX1 << " time " << "None, time was measured by OMP which is not available on your system" << endl;
@@ -958,7 +958,7 @@ void QUIC(int p, int n, double* samples, double lambda, double tol, int msg, int
       //			for (unsigned long j = 0; j <= i; j++)
       //				X[k+j] += alpha*D[k+j];
 
-      #ifdef SUPPORT_OPENMP
+      #ifdef _OPENMP
       quic_time = omp_get_wtime() - timeBegin;
       #else
           quic_time = 0;

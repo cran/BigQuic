@@ -9,7 +9,7 @@
 #include <stdint.h>
 #include <math.h>
 #include <vector>
-//#ifdef SUPPORT_OPENMP
+//#ifdef _OPENMP
 
 //#endif
 #ifdef __cplusplus
