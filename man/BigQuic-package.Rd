@@ -199,9 +199,11 @@ http://www.pcg-random.org/pdf/toms-oneill-pcg-family-v1.02.pdf
 \examples{
 lambda <- 0.91
 exampleResult <- BigQuic(inputFileName = paste(path.package("BigQuic"), 
-                         "/extdata/testInput", sep = ""), lambda = lambda, 
-                         numthreads = 1, memory_size = 512, seed = 1, 
-                         use_ram = TRUE)
+                         "/extdata/testInput", sep = ""), 
+                         outputFileName = tempfile(pattern = 
+                         "BigQuic_output_matrix", fileext = ".Bmat"),
+                         lambda = lambda, numthreads = 1, memory_size = 512, 
+                         seed = 1, use_ram = TRUE)
 BigQuic.select(exampleResult)
 plot(exampleResult)
 exampleResult$cleanFiles()

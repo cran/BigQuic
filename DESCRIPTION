@@ -1,14 +1,22 @@
 Package: BigQuic
 Type: Package
 Title: Big Quadratic Inverse Covariance Estimation
-Version: 1.1-7
-Date: 2017-02-02
-Author: Khalid B. Kunji [aut, cre], Cho-Jui Hsieh [ctb],
-    Matyas A. Sustik [ctb], Inderjit S. Dhillon [ctb],
-    Pradeep Ravikumar [ctb], Tuo Zhao [ctb], Xingguo Li [ctb], 
-    Han Liu [ctb], Kathryn Roeder [ctb], John Lafferty [ctb], 
-    Larry Wasserman [ctb], George Karypis [ctb], 
-    Melissa O'Neill [ctb], Richard Henderson [ctb]
+Version: 1.1-8
+Date: 2018-04-28
+Author: Khalid B. Kunji [aut, cre],
+  Cho-Jui Hsieh [ctb],
+  Matyas A. Sustik [ctb],
+  Inderjit S. Dhillon [ctb],
+  Pradeep Ravikumar [ctb],
+  Tuo Zhao [ctb],
+  Xingguo Li [ctb],
+  Han Liu [ctb],
+  Kathryn Roeder [ctb],
+  John Lafferty [ctb],
+  Larry Wasserman [ctb],
+  George Karypis [ctb],
+  Melissa O'Neill [ctb],
+  Richard Henderson [ctb]
 Authors@R: c(person(given = "Khalid B.", family = "Kunji", role = c("aut",
            "cre"), email = "kkunji@hbku.edu.qa"), person(given = "Cho-Jui", 
            family = "Hsieh", role = c("ctb")), person(given = "Matyas A.", 
@@ -41,5 +49,5 @@ Imports: Rcpp (>= 0.12.1), Matrix, scalreg
 LinkingTo: Rcpp
 Depends: R (>= 3.2.2), methods
 NeedsCompilation: yes
-Packaged: 2017-02-02 10:31:47 UTC; kunji
-Date/Publication: 2017-02-02 13:45:41
+Packaged: 2018-04-28 11:06:05 UTC; kunji
+Date/Publication: 2018-04-28 11:56:06 UTC
