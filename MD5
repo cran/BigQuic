@@ -1,10 +1,10 @@
-f9076103d33f7033f0cf79dfd355951d *DESCRIPTION
+19d40f05bff2f5bcd402ae5b1f342c45 *DESCRIPTION
 e1b606f127c523a4753a2a970c6ec443 *LICENSE
 502d8c78bc801d3445742a3ebde35114 *NAMESPACE
 3a70857ab7c99630b7c0571d5470ed1d *R/BigQuic.R
 8aa77c3b3011ce04f791cd59ba5f8788 *R/BigQuic.select.R
 28893248509e6c3eb1998515f35565ee *R/RcppExports.R
-677579583d3bbcce734fc026109a9041 *build/partial.rdb
+d1d16fb683ed8d8d539d169beb2af132 *build/partial.rdb
 d2f19c938ef8649cc355df50d3e14eee *inst/COPYRIGHTS
 342818b1c2463bd51b98d199be703374 *inst/extdata/testInput
 ab7d7d0674910c48391d079f9f496650 *man/BigQuic-package.Rd
@@ -15,7 +15,7 @@ c6a3ad342a84ed08c418d445d2cb38a7 *man/BigQuic_object-class.Rd
 c78cd96942dcb9614b05cd1ca223e7a6 *man/generate_sample.Rd
 43380fdfe589dd9aa4d1638da6d7ef07 *man/plot.BigQuic_object.Rd
 e40ad1f3e6c80f3e30f678dc0286a976 *src/BigQuic_init.c
-14c57c017571127a1798d99afbf0075d *src/Makevars
+a5a8d424f5c0b3bbebd05a656d4a4bd9 *src/Makevars
 9b5f6d6384d55aff89a35d1226ce3235 *src/RcppExports.cpp
 fe9c4ea068c259c71e0d4b1ade6a1dea *src/balance.c
 81584bbc0df2fce63d88a0a320cc7e1b *src/bigquic-run.cpp
