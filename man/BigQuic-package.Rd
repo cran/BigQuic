@@ -193,9 +193,9 @@ http://www.pcg-random.org/pdf/toms-oneill-pcg-family-v1.02.pdf
 \keyword{lasso}
 \keyword{Newton}
 \keyword{coordinate descent}
-\seealso{
-\code{\link[QUIC:QUIC]{QUIC}}
-}
+%% \seealso{
+%% \code{\link[QUIC:QUIC]{QUIC}}
+%% }
 \examples{
 lambda <- 0.91
 exampleResult <- BigQuic(inputFileName = paste(path.package("BigQuic"), 

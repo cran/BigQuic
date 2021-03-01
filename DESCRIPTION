@@ -1,7 +1,7 @@
 Package: BigQuic
 Type: Package
 Title: Big Quadratic Inverse Covariance Estimation
-Version: 1.1-9
+Version: 1.1-9.1
 Date: 2020-05-01
 Author: Khalid B. Kunji [aut, cre],
   Cho-Jui Hsieh [ctb],
@@ -43,11 +43,11 @@ Copyright: The included METIS library is Copyright 1997, Regents of the
 URL: https://www.r-project.org,
         https://bigdata.oden.utexas.edu/software/1035/
         http://glaros.dtc.umn.edu/gkhome/views/metis
-        http://www.pcg-random.org/download.html
+        https://www.pcg-random.org/download.html
         https://gcc.gnu.org/projects/gomp/
 Imports: Rcpp (>= 0.12.1), Matrix, scalreg
 LinkingTo: Rcpp
 Depends: R (>= 3.2.2), methods
 NeedsCompilation: yes
-Packaged: 2020-05-01 19:59:49 UTC; root
-Date/Publication: 2020-05-15 05:50:37 UTC
+Packaged: 2021-03-01 06:55:48 UTC; hornik
+Date/Publication: 2021-03-01 07:10:04 UTC
