@@ -158,5 +158,5 @@ plot.BigQuic_object = function(x, ...){
     print("No negative associations.")
   }
   
-  plot(as.vector(summary(x$precision_matrices[[which(x$lambda == x$opt.lambda, arr.ind = TRUE)]])[1:2]), col=rgb(col_vec1,col_vec2,0,1))
+  plot(summary(x$precision_matrices[[which(x$lambda == x$opt.lambda, arr.ind = TRUE)]])[1:2], col=rgb(col_vec1,col_vec2,0,1))
 }

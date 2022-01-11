@@ -1,13 +1,13 @@
-e651a93683034b27e3fdae80d535323b *DESCRIPTION
+1bdaa1d8975d703ad6faeb761b503867 *DESCRIPTION
 e1b606f127c523a4753a2a970c6ec443 *LICENSE
 502d8c78bc801d3445742a3ebde35114 *NAMESPACE
 3a70857ab7c99630b7c0571d5470ed1d *R/BigQuic.R
-8aa77c3b3011ce04f791cd59ba5f8788 *R/BigQuic.select.R
+20434c3ca388dafe9038e8da74b8720e *R/BigQuic.select.R
 28893248509e6c3eb1998515f35565ee *R/RcppExports.R
-98ec7d1edeac9bb23acc37f5c4bdf3d5 *build/partial.rdb
+499482b6a12318133e447c89d143607a *build/partial.rdb
 d2f19c938ef8649cc355df50d3e14eee *inst/COPYRIGHTS
 342818b1c2463bd51b98d199be703374 *inst/extdata/testInput
-f7d060ff14934b40c934e0229638ffdc *man/BigQuic-package.Rd
+ab7d7d0674910c48391d079f9f496650 *man/BigQuic-package.Rd
 481bbcb4c243e7a180a78d8c7dc7821f *man/BigQuic.select.Rd
 0dca4f640eda95942a9722f4cb0bb519 *man/BigQuicHelper.Rd
 c6a3ad342a84ed08c418d445d2cb38a7 *man/BigQuic_object-class.Rd
