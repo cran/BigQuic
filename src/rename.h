@@ -417,7 +417,7 @@
 #define RandomPermute			__RandomPermute
 #define ispow2				__ispow2
 #define InitRandom			__InitRandom
-#define InitRandom2  		        __InitRandom2
+//#define InitRandom2  		        __InitRandom2
 #define log2_metis			__log2_metis
 
 #endif

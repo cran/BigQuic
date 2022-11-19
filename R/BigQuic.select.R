@@ -130,7 +130,8 @@ plot.BigQuic_object = function(x, ...){
            4 3 2 1")
     }
     M <- read.table(file = x$output_file_names[which(x$lambda == x$opt.lambda, arr.ind = TRUE)], skip = 1, )
-    x$precision_matrices[[which(x$lambda == x$opt.lambda, arr.ind = TRUE)]] <- sparseMatrix(i = M[,1], j = M[,2], x = M[,3], dims = c(format_Check[1],format_Check[1]), symmetric = FALSE)
+    precDim <- max(format_Check[[1]],format_Check[[2]])
+    x$precision_matrices[[which(x$lambda == x$opt.lambda, arr.ind = TRUE)]] <- sparseMatrix(i = M[,1], j = M[,2], x = M[,3], dims = c(precDim, precDim), symmetric = FALSE)
   }
   
   col_vec1 <- unlist(summary(x$precision_matrices[[which(x$lambda == x$opt.lambda, arr.ind = TRUE)]])[3])

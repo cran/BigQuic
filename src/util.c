@@ -696,11 +696,11 @@ void InitRandom(int seed)
   */
 }
 
-void InitRandom2()
-{
-  //SEED SET IN R BEFORE CALLING... ALWAYS CHECK THIS FOR DEBUGGING!
-  //pcg32_srandom(time(NULL) ^ (intptr_t)&printf, (intptr_t)&strcpy);
-}
+//void InitRandom2()
+//{
+//  //SEED SET IN R BEFORE CALLING... ALWAYS CHECK THIS FOR DEBUGGING!
+//  //pcg32_srandom(time(NULL) ^ (intptr_t)&printf, (intptr_t)&strcpy);
+//}
 
 /*************************************************************************
 * This function returns the log2(x)

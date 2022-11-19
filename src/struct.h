@@ -32,7 +32,7 @@ typedef long long idxtype;
 typedef int idxtype;
 #endif
 
-#define MAXIDX	(1<<8*sizeof(idxtype)-2)
+#define MAXIDX	(1<<(8*sizeof(idxtype)-2))
 
 /*************************************************************************
  * The following data structure stores local search chain

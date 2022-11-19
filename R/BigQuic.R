@@ -38,7 +38,7 @@ BigQuic <- function(X = NULL, inputFileName = NULL, outputFileName = NULL, lambd
     outputFileName <- paste0(tempFileName, ".", j, ".output")
     #Check input file is at least kinda valid
     format_Check <- read.table(file = inputFileName, nrows = 1)
-    if (!is.integer(format_Check[[1]]) || !is.integer(format_Check[[1]]))
+    if (!is.integer(format_Check[[1]]) || !is.integer(format_Check[[2]]))
     {
       stop("The file is not formatted correctly for BigQuic, the first line 
            should be p (the number of attributes) then n (the number of 
@@ -52,9 +52,10 @@ BigQuic <- function(X = NULL, inputFileName = NULL, outputFileName = NULL, lambd
     outputFileNames[i] <- outputFileName
     if (use_ram)
     {
-      M <- read.table(file = outputFileName, skip = 1, )
+      M <- read.table(file = outputFileName, skip = 1)
       #########GET FROM FILE DIM(X)
-      precMatrices <- c(precMatrices, sparseMatrix(i = M[,1], j = M[,2], x = M[,3], dims = c(format_Check[1],format_Check[1]), symmetric = FALSE))  # Inverse/thetahat
+      precDim <- max(format_Check[[1]],format_Check[[2]])
+      precMatrices <- c(precMatrices, sparseMatrix(i = M[,1], j = M[,2], x = M[,3], dims = c(precDim, precDim), symmetric = FALSE))  # Inverse/thetahat
     }
     if (outFlag == FALSE && use_ram == TRUE)
     {
@@ -73,9 +74,9 @@ BigQuic <- function(X = NULL, inputFileName = NULL, outputFileName = NULL, lambd
   }
   if("AsIs" %in% class(X)){
     class(X) <- class(X)[-match("AsIs", class(X))]
-    if(class(X) != "matrix"){
+    if(!is.matrix(X)){
       X <- as.matrix(X)
-      if(class(X) != "matrix")
+      if(!is.matrix(X))
       {
         stop("X is not a matrix, nor a matrix protected with AsIs")
       }
